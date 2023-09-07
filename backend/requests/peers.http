@@ -1,0 +1,27 @@
+###
+# @name Get peers
+GET http://localhost:8080/api/v1/peer
+
+###
+# @name Add peer
+POST http://localhost:8080/api/v1/peer
+Content-Type: application/json
+
+{
+  "nickname": "adough",
+  "birthday": "13.04.2002"
+}
+
+###
+# @name Update peer
+PATCH http://localhost:8080/api/v1/peer
+Content-Type: application/json
+
+{
+  "nickname": "telvina",
+  "birthday": "18.04.2007"
+}
+
+###
+# @name Delete peer
+DELETE http://localhost:8080/api/v1/peer/adough

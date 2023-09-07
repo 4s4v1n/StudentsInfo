@@ -1,0 +1,9 @@
+title;parent_task;max_xp
+A1_Maze;CPP3_SmartCalcV2;300
+A2_SimpleNavigator;A1_Maze;400
+A3_Crypto;A2_SimpleNavigator;350
+CPP1_Matrix;;300
+CPP2_s21_containers;CPP1_Matrix;350
+CPP3_SmartCalcV2;CPP2_s21_containers;500
+D1_Linux;CPP1_Matrix;200
+D2_LinuxNetwork;D1_Linux;300

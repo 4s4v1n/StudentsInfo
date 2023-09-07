@@ -1,0 +1,29 @@
+###
+# @name Get friends
+GET http://localhost:8080/api/v1/friends
+
+###
+# @name Add friends
+POST http://localhost:8080/api/v1/friends
+Content-Type: application/json
+
+{
+  "peer_1": "telvina",
+  "peer_2": "adough"
+}
+
+###
+# @name Update friends
+PATCH http://localhost:8080/api/v1/friends
+Content-Type: application/json
+
+{
+  "id": 2,
+  "peer_1": "adough",
+  "peer_2": "telvina"
+}
+
+
+###
+# @name Delete transferredPoints
+DELETE http://localhost:8080/api/v1/friends/1

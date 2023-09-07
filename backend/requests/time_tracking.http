@@ -1,0 +1,33 @@
+###
+# @name Get time_tracking
+GET http://localhost:8080/api/v1/time_tracking
+
+###
+# @name Add time_tracking
+POST http://localhost:8080/api/v1/time_tracking
+Content-Type: application/json
+
+{
+  "peer": "telvina",
+  "date": "13.07.2023",
+  "time": "18:06:22",
+  "state": 1
+}
+
+###
+# @name Update time_tracking
+PATCH http://localhost:8080/api/v1/time_tracking
+Content-Type: application/json
+
+{
+  "id": 1,
+  "peer": "aaa",
+  "date": "18.07.2023",
+  "time": "18:06:22",
+  "state": 3
+}
+
+
+###
+# @name Delete time_tracking
+DELETE http://localhost:8080/api/v1/time_tracking/1

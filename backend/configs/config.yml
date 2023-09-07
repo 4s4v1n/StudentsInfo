@@ -1,0 +1,11 @@
+app:
+  name: 'apg3'
+  version: '1.0.0'
+
+http:
+  port: '8080'
+
+postgres:
+  max_open_conns: 50
+  max_idle_conns: 25
+  conn_max_lifetime: "30s"

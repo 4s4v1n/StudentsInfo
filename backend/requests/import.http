@@ -1,0 +1,1751 @@
+###
+# @name import peers
+POST http://localhost:8080/api/v1/import/peers
+Content-Type: application/json
+
+[
+  {
+    "nickname": "hlowell",
+    "birthday": "1993.02.08"
+  },
+  {
+    "nickname": "phawkgir",
+    "birthday": "1999.01.01"
+  },
+  {
+    "nickname": "adough",
+    "birthday": "1999.01.10"
+  },
+  {
+    "nickname": "bromanyt",
+    "birthday": "1985.02.12"
+  },
+  {
+    "nickname": "jcraster",
+    "birthday": "2001.01.08"
+  },
+  {
+    "nickname": "bot",
+    "birthday": "2000.01.08"
+  }
+]
+
+###
+# @name import tasks
+POST http://localhost:8080/api/v1/import/tasks
+Content-Type: application/json
+
+[
+  {
+    "title": "A1_Maze",
+    "parent_task": "CPP3_SmartCalcV2",
+    "max_xp": 300
+  },
+  {
+    "title": "A2_SimpleNavigator",
+    "parent_task": "A1_Maze",
+    "max_xp": 400
+  },
+  {
+    "title": "A3_Crypto",
+    "parent_task": "A2_SimpleNavigator",
+    "max_xp": 350
+  },
+  {
+    "title": "CPP1_Matrix",
+    "max_xp": 300
+  },
+  {
+    "title": "CPP2_s21_containers",
+    "parent_task": "CPP1_Matrix",
+    "max_xp": 350
+  },
+  {
+    "title": "CPP3_SmartCalcV2",
+    "parent_task": "CPP2_s21_containers",
+    "max_xp": 500
+  },
+  {
+    "title": "D1_Linux",
+    "parent_task": "CPP1_Matrix",
+    "max_xp": 200
+  },
+  {
+    "title": "D2_LinuxNetwork",
+    "parent_task": "D1_Linux",
+    "max_xp": 300
+  }
+]
+
+###
+# @name import recommendations
+POST http://localhost:8080/api/v1/import/recommendations
+Content-Type: application/json
+
+[
+  {
+    "id": 1,
+    "peer": "hlowell",
+    "recommended_peer": "adough"
+  },
+  {
+    "id": 2,
+    "peer": "bromanyt",
+    "recommended_peer": "adough"
+  },
+  {
+    "id": 3,
+    "peer": "phawkgir",
+    "recommended_peer": "jcraster"
+  },
+  {
+    "id": 4,
+    "peer": "bromanyt",
+    "recommended_peer": "hlowell"
+  },
+  {
+    "id": 5,
+    "peer": "bromanyt",
+    "recommended_peer": "jcraster"
+  },
+  {
+    "id": 6,
+    "peer": "adough",
+    "recommended_peer": "phawkgir"
+  },
+  {
+    "id": 7,
+    "peer": "adough",
+    "recommended_peer": "bromanyt"
+  },
+  {
+    "id": 8,
+    "peer": "bromanyt",
+    "recommended_peer": "phawkgir"
+  },
+  {
+    "id": 9,
+    "peer": "jcraster",
+    "recommended_peer": "phawkgir"
+  }
+]
+
+###
+# @name import friends
+POST http://localhost:8080/api/v1/import/friends
+Content-Type: application/json
+
+[
+  {
+    "id": 1,
+    "peer_1": "hlowell",
+    "peer_2": "adough"
+  },
+  {
+    "id": 2,
+    "peer_1": "hlowell",
+    "peer_2": "jcraster"
+  },
+  {
+    "id": 3,
+    "peer_1": "hlowell",
+    "peer_2": "phawkgir"
+  },
+  {
+    "id": 4,
+    "peer_1": "bromanyt",
+    "peer_2": "jcraster"
+  },
+  {
+    "id": 5,
+    "peer_1": "bromanyt",
+    "peer_2": "adough"
+  },
+  {
+    "id": 6,
+    "peer_1": "phawkgir",
+    "peer_2": "hlowell"
+  },
+  {
+    "id": 7,
+    "peer_1": "phawkgir",
+    "peer_2": "jcraster"
+  },
+  {
+    "id": 8,
+    "peer_1": "adough",
+    "peer_2": "bromanyt"
+  },
+  {
+    "id": 9,
+    "peer_1": "jcraster",
+    "peer_2": "phawkgir"
+  }
+]
+
+###
+# @name import checks
+POST http://localhost:8080/api/v1/import/checks
+Content-Type: application/json
+
+[
+  {
+    "id": 1,
+    "peer": "phawkgir",
+    "task": "A1_Maze",
+    "date": "2022.02.01"
+  },
+  {
+    "id": 2,
+    "peer": "hlowell",
+    "task": "A1_Maze",
+    "date": "2022.02.02"
+  },
+  {
+    "id": 3,
+    "peer": "bromanyt",
+    "task": "A1_Maze",
+    "date": "2022.02.02"
+  },
+  {
+    "id": 4,
+    "peer": "adough",
+    "task": "A1_Maze",
+    "date": "2022.02.02"
+  },
+  {
+    "id": 5,
+    "peer": "phawkgir",
+    "task": "A2_SimpleNavigator",
+    "date": "2022.02.05"
+  },
+  {
+    "id": 6,
+    "peer": "hlowell",
+    "task": "A2_SimpleNavigator",
+    "date": "2022.02.05"
+  },
+  {
+    "id": 7,
+    "peer": "jcraster",
+    "task": "A1_Maze",
+    "date": "2022.02.05"
+  },
+  {
+    "id": 8,
+    "peer": "bromanyt",
+    "task": "A2_SimpleNavigator",
+    "date": "2022.02.15"
+  },
+  {
+    "id": 9,
+    "peer": "hlowell",
+    "task": "A3_Crypto",
+    "date": "2022.02.15"
+  },
+  {
+    "id": 10,
+    "peer": "phawkgir",
+    "task": "A3_Crypto",
+    "date": "2022.02.15"
+  },
+  {
+    "id": 11,
+    "peer": "adough",
+    "task": "A2_SimpleNavigator",
+    "date": "2022.02.20"
+  },
+  {
+    "id": 12,
+    "peer": "jcraster",
+    "task": "A2_SimpleNavigator",
+    "date": "2022.02.20"
+  },
+  {
+    "id": 13,
+    "peer": "bromanyt",
+    "task": "A3_Crypto",
+    "date": "2022.02.20"
+  },
+  {
+    "id": 14,
+    "peer": "jcraster",
+    "task": "A3_Crypto",
+    "date": "2022.02.20"
+  },
+  {
+    "id": 15,
+    "peer": "adough",
+    "task": "CPP1_Matrix",
+    "date": "2022.01.01"
+  },
+  {
+    "id": 16,
+    "peer": "jcraster",
+    "task": "CPP1_Matrix",
+    "date": "2022.01.01"
+  },
+  {
+    "id": 17,
+    "peer": "hlowell",
+    "task": "CPP1_Matrix",
+    "date": "2022.02.01"
+  },
+  {
+    "id": 18,
+    "peer": "phawkgir",
+    "task": "CPP1_Matrix",
+    "date": "2022.02.02"
+  },
+  {
+    "id": 19,
+    "peer": "bromanyt",
+    "task": "CPP1_Matrix",
+    "date": "2022.02.02"
+  },
+  {
+    "id": 20,
+    "peer": "jcraster",
+    "task": "CPP2_s21_containers",
+    "date": "2022.01.02"
+  },
+  {
+    "id": 21,
+    "peer": "phawkgir",
+    "task": "CPP2_s21_containers",
+    "date": "2022.01.07"
+  },
+  {
+    "id": 22,
+    "peer": "jcraster",
+    "task": "CPP2_s21_containers",
+    "date": "2022.01.07"
+  },
+  {
+    "id": 23,
+    "peer": "hlowell",
+    "task": "CPP2_s21_containers",
+    "date": "2022.02.07"
+  },
+  {
+    "id": 24,
+    "peer": "adough",
+    "task": "CPP2_s21_containers",
+    "date": "2022.01.10"
+  },
+  {
+    "id": 25,
+    "peer": "bromanyt",
+    "task": "CPP2_s21_containers",
+    "date": "2022.01.10"
+  },
+  {
+    "id": 26,
+    "peer": "hlowell",
+    "task": "CPP2_s21_containers",
+    "date": "2022.01.10"
+  },
+  {
+    "id": 27,
+    "peer": "adough",
+    "task": "CPP3_SmartCalcV2",
+    "date": "2022.01.15"
+  },
+  {
+    "id": 28,
+    "peer": "jcraster",
+    "task": "CPP3_SmartCalcV2",
+    "date": "2022.01.15"
+  },
+  {
+    "id": 29,
+    "peer": "hlowell",
+    "task": "CPP3_SmartCalcV2",
+    "date": "2022.02.15"
+  },
+  {
+    "id": 30,
+    "peer": "phawkgir",
+    "task": "CPP3_SmartCalcV2",
+    "date": "2022.02.15"
+  },
+  {
+    "id": 31,
+    "peer": "bromanyt",
+    "task": "CPP3_SmartCalcV2",
+    "date": "2022.02.15"
+  },
+  {
+    "id": 32,
+    "peer": "jcraster",
+    "task": "D1_Linux",
+    "date": "2022.03.15"
+  }
+]
+
+###
+# @name import p2p
+POST http://localhost:8080/api/v1/import/p2p
+Content-Type: application/json
+
+[
+  {
+    "id": 1,
+    "check_id": 1,
+    "checking_peer": "adough",
+    "state": "Start",
+    "time": "13:00"
+  },
+  {
+    "id": 2,
+    "check_id": 1,
+    "checking_peer": "adough",
+    "state": "Success",
+    "time": "13:30"
+  },
+  {
+    "id": 3,
+    "check_id": 2,
+    "checking_peer": "bromanyt",
+    "state": "Start",
+    "time": "20:00"
+  },
+  {
+    "id": 4,
+    "check_id": 2,
+    "checking_peer": "bromanyt",
+    "state": "Success",
+    "time": "20:30"
+  },
+  {
+    "id": 5,
+    "check_id": 3,
+    "checking_peer": "hlowell",
+    "state": "Start",
+    "time": "14:30"
+  },
+  {
+    "id": 6,
+    "check_id": 3,
+    "checking_peer": "hlowell",
+    "state": "Success",
+    "time": "14:55"
+  },
+  {
+    "id": 7,
+    "check_id": 4,
+    "checking_peer": "phawkgir",
+    "state": "Start",
+    "time": "18:30"
+  },
+  {
+    "id": 8,
+    "check_id": 4,
+    "checking_peer": "phawkgir",
+    "state": "Success",
+    "time": "19:00"
+  },
+  {
+    "id": 9,
+    "check_id": 5,
+    "checking_peer": "hlowell",
+    "state": "Start",
+    "time": "11:00"
+  },
+  {
+    "id": 10,
+    "check_id": 5,
+    "checking_peer": "hlowell",
+    "state": "Success",
+    "time": "11:40"
+  },
+  {
+    "id": 11,
+    "check_id": 6,
+    "checking_peer": "bromanyt",
+    "state": "Start",
+    "time": "16:33"
+  },
+  {
+    "id": 12,
+    "check_id": 6,
+    "checking_peer": "bromanyt",
+    "state": "Success",
+    "time": "16:49"
+  },
+  {
+    "id": 13,
+    "check_id": 7,
+    "checking_peer": "hlowell",
+    "state": "Start",
+    "time": "16:22"
+  },
+  {
+    "id": 14,
+    "check_id": 7,
+    "checking_peer": "hlowell",
+    "state": "Success",
+    "time": "16:48"
+  },
+  {
+    "id": 15,
+    "check_id": 8,
+    "checking_peer": "adough",
+    "state": "Start",
+    "time": "10:30"
+  },
+  {
+    "id": 16,
+    "check_id": 8,
+    "checking_peer": "adough",
+    "state": "Success",
+    "time": "11:00"
+  },
+  {
+    "id": 17,
+    "check_id": 9,
+    "checking_peer": "phawkgir",
+    "state": "Start",
+    "time": "17:11"
+  },
+  {
+    "id": 18,
+    "check_id": 9,
+    "checking_peer": "phawkgir",
+    "state": "Failure",
+    "time": "17:26"
+  },
+  {
+    "id": 19,
+    "check_id": 10,
+    "checking_peer": "jcraster",
+    "state": "Start",
+    "time": "12:31"
+  },
+  {
+    "id": 20,
+    "check_id": 10,
+    "checking_peer": "jcraster",
+    "state": "Success",
+    "time": "13:02"
+  },
+  {
+    "id": 21,
+    "check_id": 11,
+    "checking_peer": "bromanyt",
+    "state": "Start",
+    "time": "16:31"
+  },
+  {
+    "id": 22,
+    "check_id": 11,
+    "checking_peer": "bromanyt",
+    "state": "Failure",
+    "time": "17:02"
+  },
+  {
+    "id": 23,
+    "check_id": 12,
+    "checking_peer": "hlowell",
+    "state": "Start",
+    "time": "11:31"
+  },
+  {
+    "id": 24,
+    "check_id": 12,
+    "checking_peer": "hlowell",
+    "state": "Success",
+    "time": "12:02"
+  },
+  {
+    "id": 25,
+    "check_id": 13,
+    "checking_peer": "jcraster",
+    "state": "Start",
+    "time": "18:31"
+  },
+  {
+    "id": 26,
+    "check_id": 13,
+    "checking_peer": "jcraster",
+    "state": "Success",
+    "time": "19:02"
+  },
+  {
+    "id": 27,
+    "check_id": 14,
+    "checking_peer": "adough",
+    "state": "Start",
+    "time": "20:31"
+  },
+  {
+    "id": 28,
+    "check_id": 14,
+    "checking_peer": "adough",
+    "state": "Success",
+    "time": "21:02"
+  },
+  {
+    "id": 29,
+    "check_id": 15,
+    "checking_peer": "jcraster",
+    "state": "Start",
+    "time": "14:00"
+  },
+  {
+    "id": 30,
+    "check_id": 15,
+    "checking_peer": "jcraster",
+    "state": "Success",
+    "time": "14:30"
+  },
+  {
+    "id": 31,
+    "check_id": 16,
+    "checking_peer": "adough",
+    "state": "Start",
+    "time": "15:00"
+  },
+  {
+    "id": 32,
+    "check_id": 16,
+    "checking_peer": "adough",
+    "state": "Success",
+    "time": "15:30"
+  },
+  {
+    "id": 33,
+    "check_id": 17,
+    "checking_peer": "bromanyt",
+    "state": "Start",
+    "time": "16:00"
+  },
+  {
+    "id": 34,
+    "check_id": 17,
+    "checking_peer": "bromanyt",
+    "state": "Success",
+    "time": "16:30"
+  },
+  {
+    "id": 35,
+    "check_id": 18,
+    "checking_peer": "jcraster",
+    "state": "Start",
+    "time": "17:00"
+  },
+  {
+    "id": 36,
+    "check_id": 18,
+    "checking_peer": "jcraster",
+    "state": "Success",
+    "time": "17:30"
+  },
+  {
+    "id": 37,
+    "check_id": 19,
+    "checking_peer": "adough",
+    "state": "Start",
+    "time": "18:00"
+  },
+  {
+    "id": 38,
+    "check_id": 19,
+    "checking_peer": "adough",
+    "state": "Success",
+    "time": "18:30"
+  },
+  {
+    "id": 39,
+    "check_id": 20,
+    "checking_peer": "hlowell",
+    "state": "Start",
+    "time": "19:00"
+  },
+  {
+    "id": 40,
+    "check_id": 20,
+    "checking_peer": "hlowell",
+    "state": "Failure",
+    "time": "19:30"
+  },
+  {
+    "id": 41,
+    "check_id": 21,
+    "checking_peer": "jcraster",
+    "state": "Start",
+    "time": "20:00"
+  },
+  {
+    "id": 42,
+    "check_id": 21,
+    "checking_peer": "jcraster",
+    "state": "Success",
+    "time": "20:30"
+  },
+  {
+    "id": 43,
+    "check_id": 22,
+    "checking_peer": "adough",
+    "state": "Start",
+    "time": "21:00"
+  },
+  {
+    "id": 44,
+    "check_id": 22,
+    "checking_peer": "adough",
+    "state": "Success",
+    "time": "21:30"
+  },
+  {
+    "id": 45,
+    "check_id": 23,
+    "checking_peer": "phawkgir",
+    "state": "Start",
+    "time": "22:00"
+  },
+  {
+    "id": 46,
+    "check_id": 23,
+    "checking_peer": "phawkgir",
+    "state": "Success",
+    "time": "22:30"
+  },
+  {
+    "id": 47,
+    "check_id": 23,
+    "checking_peer": "hlowell",
+    "state": "Start",
+    "time": "23:00"
+  },
+  {
+    "id": 48,
+    "check_id": 23,
+    "checking_peer": "hlowell",
+    "state": "Success",
+    "time": "23:30"
+  },
+  {
+    "id": 49,
+    "check_id": 24,
+    "checking_peer": "hlowell",
+    "state": "Start",
+    "time": "12:00"
+  },
+  {
+    "id": 50,
+    "check_id": 24,
+    "checking_peer": "hlowell",
+    "state": "Success",
+    "time": "12:30"
+  },
+  {
+    "id": 51,
+    "check_id": 25,
+    "checking_peer": "jcraster",
+    "state": "Start",
+    "time": "13:00"
+  },
+  {
+    "id": 52,
+    "check_id": 25,
+    "checking_peer": "jcraster",
+    "state": "Success",
+    "time": "13:30"
+  },
+  {
+    "id": 53,
+    "check_id": 26,
+    "checking_peer": "phawkgir",
+    "state": "Start",
+    "time": "14:00"
+  },
+  {
+    "id": 54,
+    "check_id": 26,
+    "checking_peer": "phawkgir",
+    "state": "Failure",
+    "time": "14:30"
+  },
+  {
+    "id": 55,
+    "check_id": 27,
+    "checking_peer": "phawkgir",
+    "state": "Start",
+    "time": "15:00"
+  },
+  {
+    "id": 56,
+    "check_id": 27,
+    "checking_peer": "phawkgir",
+    "state": "Success",
+    "time": "15:30"
+  },
+  {
+    "id": 57,
+    "check_id": 28,
+    "checking_peer": "hlowell",
+    "state": "Start",
+    "time": "16:00"
+  },
+  {
+    "id": 58,
+    "check_id": 28,
+    "checking_peer": "hlowell",
+    "state": "Success",
+    "time": "16:30"
+  },
+  {
+    "id": 59,
+    "check_id": 29,
+    "checking_peer": "jcraster",
+    "state": "Start",
+    "time": "17:00"
+  },
+  {
+    "id": 60,
+    "check_id": 29,
+    "checking_peer": "jcraster",
+    "state": "Success",
+    "time": "17:30"
+  },
+  {
+    "id": 61,
+    "check_id": 30,
+    "checking_peer": "bromanyt",
+    "state": "Start",
+    "time": "18:00"
+  },
+  {
+    "id": 62,
+    "check_id": 30,
+    "checking_peer": "bromanyt",
+    "state": "Success",
+    "time": "18:30"
+  },
+  {
+    "id": 63,
+    "check_id": 31,
+    "checking_peer": "phawkgir",
+    "state": "Start",
+    "time": "19:00"
+  },
+  {
+    "id": 64,
+    "check_id": 31,
+    "checking_peer": "phawkgir",
+    "state": "Success",
+    "time": "19:30"
+  },
+  {
+    "id": 65,
+    "check_id": 32,
+    "checking_peer": "phawkgir",
+    "state": "Success",
+    "time": "20:30"
+  }
+]
+
+###
+# @name import verter
+POST http://localhost:8080/api/v1/import/verter
+Content-Type: application/json
+
+[
+  {
+    "id": 1,
+    "check_id": 1,
+    "state": "Start",
+    "time": "13:35"
+  },
+  {
+    "id": 2,
+    "check_id": 1,
+    "state": "Success",
+    "time": "13:40"
+  },
+  {
+    "id": 3,
+    "check_id": 2,
+    "state": "Start",
+    "time": "20:35"
+  },
+  {
+    "id": 4,
+    "check_id": 2,
+    "state": "Success",
+    "time": "20:40"
+  },
+  {
+    "id": 5,
+    "check_id": 3,
+    "state": "Start",
+    "time": "15:00"
+  },
+  {
+    "id": 6,
+    "check_id": 3,
+    "state": "Success",
+    "time": "15:05"
+  },
+  {
+    "id": 7,
+    "check_id": 4,
+    "state": "Start",
+    "time": "19:05"
+  },
+  {
+    "id": 8,
+    "check_id": 4,
+    "state": "Success",
+    "time": "19:10"
+  },
+  {
+    "id": 9,
+    "check_id": 5,
+    "state": "Start",
+    "time": "11:45"
+  },
+  {
+    "id": 10,
+    "check_id": 5,
+    "state": "Success",
+    "time": "11:50"
+  },
+  {
+    "id": 11,
+    "check_id": 6,
+    "state": "Start",
+    "time": "16:50"
+  },
+  {
+    "id": 12,
+    "check_id": 6,
+    "state": "Success",
+    "time": "16:55"
+  },
+  {
+    "id": 13,
+    "check_id": 7,
+    "state": "Start",
+    "time": "16:00"
+  },
+  {
+    "id": 14,
+    "check_id": 7,
+    "state": "Success",
+    "time": "16:55"
+  },
+  {
+    "id": 15,
+    "check_id": 8,
+    "state": "Start",
+    "time": "11:05"
+  },
+  {
+    "id": 16,
+    "check_id": 8,
+    "state": "Success",
+    "time": "11:10"
+  },
+  {
+    "id": 17,
+    "check_id": 9,
+    "state": "Start",
+    "time": "17:30"
+  },
+  {
+    "id": 18,
+    "check_id": 9,
+    "state": "Failure",
+    "time": "17:35"
+  },
+  {
+    "id": 19,
+    "check_id": 10,
+    "state": "Start",
+    "time": "13:05"
+  },
+  {
+    "id": 20,
+    "check_id": 10,
+    "state": "Success",
+    "time": "13:10"
+  },
+  {
+    "id": 21,
+    "check_id": 11,
+    "state": "Start",
+    "time": "17:10"
+  },
+  {
+    "id": 22,
+    "check_id": 11,
+    "state": "Failure",
+    "time": "17:15"
+  },
+  {
+    "id": 23,
+    "check_id": 12,
+    "state": "Start",
+    "time": "12:10"
+  },
+  {
+    "id": 24,
+    "check_id": 12,
+    "state": "Success",
+    "time": "12:15"
+  },
+  {
+    "id": 25,
+    "check_id": 13,
+    "state": "Start",
+    "time": "19:04"
+  },
+  {
+    "id": 26,
+    "check_id": 13,
+    "state": "Success",
+    "time": "19:09"
+  },
+  {
+    "id": 27,
+    "check_id": 14,
+    "state": "Start",
+    "time": "21:10"
+  },
+  {
+    "id": 28,
+    "check_id": 14,
+    "state": "Success",
+    "time": "21:15"
+  },
+  {
+    "id": 29,
+    "check_id": 15,
+    "state": "Start",
+    "time": "14:35"
+  },
+  {
+    "id": 30,
+    "check_id": 15,
+    "state": "Success",
+    "time": "14:40"
+  },
+  {
+    "id": 31,
+    "check_id": 16,
+    "state": "Start",
+    "time": "15:35"
+  },
+  {
+    "id": 32,
+    "check_id": 16,
+    "state": "Success",
+    "time": "15:40"
+  },
+  {
+    "id": 33,
+    "check_id": 17,
+    "state": "Start",
+    "time": "16:35"
+  },
+  {
+    "id": 34,
+    "check_id": 17,
+    "state": "Success",
+    "time": "16:40"
+  },
+  {
+    "id": 35,
+    "check_id": 18,
+    "state": "Start",
+    "time": "17:35"
+  },
+  {
+    "id": 36,
+    "check_id": 18,
+    "state": "Success",
+    "time": "17:40"
+  },
+  {
+    "id": 37,
+    "check_id": 19,
+    "state": "Start",
+    "time": "18:35"
+  },
+  {
+    "id": 38,
+    "check_id": 19,
+    "state": "Success",
+    "time": "18:40"
+  },
+  {
+    "id": 39,
+    "check_id": 20,
+    "state": "Start",
+    "time": "19:35"
+  },
+  {
+    "id": 40,
+    "check_id": 20,
+    "state": "Failure",
+    "time": "19:40"
+  },
+  {
+    "id": 41,
+    "check_id": 21,
+    "state": "Start",
+    "time": "20:35"
+  },
+  {
+    "id": 42,
+    "check_id": 21,
+    "state": "Success",
+    "time": "20:40"
+  },
+  {
+    "id": 43,
+    "check_id": 22,
+    "state": "Start",
+    "time": "21:35"
+  },
+  {
+    "id": 44,
+    "check_id": 22,
+    "state": "Success",
+    "time": "21:40"
+  },
+  {
+    "id": 45,
+    "check_id": 23,
+    "state": "Start",
+    "time": "22:34"
+  },
+  {
+    "id": 46,
+    "check_id": 23,
+    "state": "Success",
+    "time": "22:40"
+  },
+  {
+    "id": 47,
+    "check_id": 23,
+    "state": "Start",
+    "time": "23:35"
+  },
+  {
+    "id": 48,
+    "check_id": 23,
+    "state": "Success",
+    "time": "23:37"
+  },
+  {
+    "id": 49,
+    "check_id": 24,
+    "state": "Start",
+    "time": "12:34"
+  },
+  {
+    "id": 50,
+    "check_id": 24,
+    "state": "Success",
+    "time": "12:40"
+  },
+  {
+    "id": 51,
+    "check_id": 25,
+    "state": "Start",
+    "time": "13:34"
+  },
+  {
+    "id": 52,
+    "check_id": 25,
+    "state": "Success",
+    "time": "13:49"
+  },
+  {
+    "id": 53,
+    "check_id": 26,
+    "state": "Start",
+    "time": "14:40"
+  },
+  {
+    "id": 54,
+    "check_id": 26,
+    "state": "Failure",
+    "time": "14:45"
+  },
+  {
+    "id": 55,
+    "check_id": 27,
+    "state": "Start",
+    "time": "15:35"
+  },
+  {
+    "id": 56,
+    "check_id": 27,
+    "state": "Success",
+    "time": "15:40"
+  },
+  {
+    "id": 57,
+    "check_id": 28,
+    "state": "Start",
+    "time": "16:30"
+  },
+  {
+    "id": 58,
+    "check_id": 28,
+    "state": "Success",
+    "time": "16:40"
+  },
+  {
+    "id": 59,
+    "check_id": 29,
+    "state": "Start",
+    "time": "17:35"
+  },
+  {
+    "id": 60,
+    "check_id": 29,
+    "state": "Success",
+    "time": "17:40"
+  },
+  {
+    "id": 61,
+    "check_id": 30,
+    "state": "Start",
+    "time": "18:35"
+  },
+  {
+    "id": 62,
+    "check_id": 30,
+    "state": "Success",
+    "time": "18:40"
+  },
+  {
+    "id": 63,
+    "check_id": 31,
+    "state": "Start",
+    "time": "19:35"
+  },
+  {
+    "id": 64,
+    "check_id": 31,
+    "state": "Success",
+    "time": "19:40"
+  },
+  {
+    "id": 65,
+    "check_id": 32,
+    "state": "Start",
+    "time": "20:30"
+  },
+  {
+    "id": 66,
+    "check_id": 32,
+    "state": "Success",
+    "time": "20:35"
+  }
+]
+
+###
+# @name import xp
+POST http://localhost:8080/api/v1/import/xp
+Content-Type: application/json
+
+[
+  {
+    "id": 1,
+    "check_id": 1,
+    "xp_amount": 290
+  },
+  {
+    "id": 2,
+    "check_id": 2,
+    "xp_amount": 291
+  },
+  {
+    "id": 3,
+    "check_id": 3,
+    "xp_amount": 234
+  },
+  {
+    "id": 4,
+    "check_id": 4,
+    "xp_amount": 277
+  },
+  {
+    "id": 5,
+    "check_id": 5,
+    "xp_amount": 289
+  },
+  {
+    "id": 6,
+    "check_id": 6,
+    "xp_amount": 244
+  },
+  {
+    "id": 7,
+    "check_id": 7,
+    "xp_amount": 286
+  },
+  {
+    "id": 8,
+    "check_id": 8,
+    "xp_amount": 340
+  },
+  {
+    "id": 9,
+    "check_id": 9,
+    "xp_amount": 0
+  },
+  {
+    "id": 10,
+    "check_id": 10,
+    "xp_amount": 325
+  },
+  {
+    "id": 11,
+    "check_id": 11,
+    "xp_amount": 0
+  },
+  {
+    "id": 12,
+    "check_id": 12,
+    "xp_amount": 311
+  },
+  {
+    "id": 13,
+    "check_id": 13,
+    "xp_amount": 322
+  },
+  {
+    "id": 14,
+    "check_id": 14,
+    "xp_amount": 312
+  },
+  {
+    "id": 15,
+    "check_id": 15,
+    "xp_amount": 221
+  },
+  {
+    "id": 16,
+    "check_id": 16,
+    "xp_amount": 253
+  },
+  {
+    "id": 17,
+    "check_id": 17,
+    "xp_amount": 234
+  },
+  {
+    "id": 18,
+    "check_id": 18,
+    "xp_amount": 212
+  },
+  {
+    "id": 19,
+    "check_id": 19,
+    "xp_amount": 275
+  },
+  {
+    "id": 20,
+    "check_id": 20,
+    "xp_amount": 0
+  },
+  {
+    "id": 21,
+    "check_id": 21,
+    "xp_amount": 254
+  },
+  {
+    "id": 22,
+    "check_id": 22,
+    "xp_amount": 221
+  },
+  {
+    "id": 23,
+    "check_id": 23,
+    "xp_amount": 232
+  },
+  {
+    "id": 24,
+    "check_id": 24,
+    "xp_amount": 221
+  },
+  {
+    "id": 25,
+    "check_id": 25,
+    "xp_amount": 233
+  },
+  {
+    "id": 26,
+    "check_id": 26,
+    "xp_amount": 0
+  },
+  {
+    "id": 27,
+    "check_id": 27,
+    "xp_amount": 265
+  },
+  {
+    "id": 28,
+    "check_id": 28,
+    "xp_amount": 224
+  },
+  {
+    "id": 29,
+    "check_id": 29,
+    "xp_amount": 264
+  },
+  {
+    "id": 30,
+    "check_id": 30,
+    "xp_amount": 276
+  },
+  {
+    "id": 31,
+    "check_id": 31,
+    "xp_amount": 223
+  },
+  {
+    "id": 32,
+    "check_id": 32,
+    "xp_amount": 200
+  }
+]
+
+###
+# @name import transferred_points
+POST http://localhost:8080/api/v1/import/transferred_points
+Content-Type: application/json
+
+[
+  {
+    "id": 1,
+    "checking_peer": "hlowell",
+    "checked_peer": "adough",
+    "points_amount": 3
+  },
+  {
+    "id": 2,
+    "checking_peer": "hlowell",
+    "checked_peer": "phawkgir",
+    "points_amount": 4
+  },
+  {
+    "id": 3,
+    "checking_peer": "hlowell",
+    "checked_peer": "bromanyt",
+    "points_amount": 2
+  },
+  {
+    "id": 4,
+    "checking_peer": "hlowell",
+    "checked_peer": "jcraster",
+    "points_amount": 1
+  },
+  {
+    "id": 5,
+    "checking_peer": "phawkgir",
+    "checked_peer": "adough",
+    "points_amount": 5
+  },
+  {
+    "id": 6,
+    "checking_peer": "phawkgir",
+    "checked_peer": "hlowell",
+    "points_amount": 3
+  },
+  {
+    "id": 7,
+    "checking_peer": "phawkgir",
+    "checked_peer": "bromanyt",
+    "points_amount": 2
+  },
+  {
+    "id": 8,
+    "checking_peer": "phawkgir",
+    "checked_peer": "jcraster",
+    "points_amount": 1
+  },
+  {
+    "id": 9,
+    "checking_peer": "adough",
+    "checked_peer": "hlowell",
+    "points_amount": 7
+  },
+  {
+    "id": 10,
+    "checking_peer": "adough",
+    "checked_peer": "phawkgir",
+    "points_amount": 2
+  },
+  {
+    "id": 11,
+    "checking_peer": "adough",
+    "checked_peer": "bromanyt",
+    "points_amount": 4
+  },
+  {
+    "id": 12,
+    "checking_peer": "adough",
+    "checked_peer": "jcraster",
+    "points_amount": 2
+  },
+  {
+    "id": 13,
+    "checking_peer": "bromanyt",
+    "checked_peer": "jcraster",
+    "points_amount": 8
+  },
+  {
+    "id": 14,
+    "checking_peer": "bromanyt",
+    "checked_peer": "phawkgir",
+    "points_amount": 11
+  },
+  {
+    "id": 15,
+    "checking_peer": "bromanyt",
+    "checked_peer": "hlowell",
+    "points_amount": 2
+  },
+  {
+    "id": 16,
+    "checking_peer": "bromanyt",
+    "checked_peer": "adough",
+    "points_amount": 4
+  },
+  {
+    "id": 17,
+    "checking_peer": "jcraster",
+    "checked_peer": "adough",
+    "points_amount": 10
+  },
+  {
+    "id": 18,
+    "checking_peer": "jcraster",
+    "checked_peer": "hlowell",
+    "points_amount": 9
+  },
+  {
+    "id": 19,
+    "checking_peer": "jcraster",
+    "checked_peer": "phawkgir",
+    "points_amount": 4
+  },
+  {
+    "id": 20,
+    "checking_peer": "jcraster",
+    "checked_peer": "bromanyt",
+    "points_amount": 6
+  }
+]
+
+###
+# @name import time_tracking
+POST http://localhost:8080/api/v1/import/time_tracking
+Content-Type: application/json
+
+[
+  {
+    "id": 1,
+    "peer": "hlowell",
+    "date": "2022.01.30",
+    "time": "10:37",
+    "state": 1
+  },
+  {
+    "id": 2,
+    "peer": "jcraster",
+    "date": "2022.01.30",
+    "time": "12:22",
+    "state": 1
+  },
+  {
+    "id": 3,
+    "peer": "hlowell",
+    "date": "2022.01.30",
+    "time": "15:48",
+    "state": 2
+  },
+  {
+    "id": 4,
+    "peer": "adough",
+    "date": "2022.01.30",
+    "time": "11:02",
+    "state": 1
+  },
+  {
+    "id": 5,
+    "peer": "jcraster",
+    "date": "2022.01.30",
+    "time": "19:33",
+    "state": 2
+  },
+  {
+    "id": 6,
+    "peer": "adough",
+    "date": "2022.01.30",
+    "time": "20:02",
+    "state": 2
+  },
+  {
+    "id": 7,
+    "peer": "bromanyt",
+    "date": "2022.01.31",
+    "time": "08:03",
+    "state": 1
+  },
+  {
+    "id": 8,
+    "peer": "bromanyt",
+    "date": "2022.01.31",
+    "time": "12:03",
+    "state": 2
+  },
+  {
+    "id": 9,
+    "peer": "hlowell",
+    "date": "2022.02.01",
+    "time": "10:32",
+    "state": 1
+  },
+  {
+    "id": 10,
+    "peer": "hlowell",
+    "date": "2022.02.01",
+    "time": "20:32",
+    "state": 2
+  },
+  {
+    "id": 11,
+    "peer": "jcraster",
+    "date": "2022.02.01",
+    "time": "09:10",
+    "state": 1
+  },
+  {
+    "id": 12,
+    "peer": "jcraster",
+    "date": "2022.02.01",
+    "time": "21:10",
+    "state": 2
+  },
+  {
+    "id": 13,
+    "peer": "adough",
+    "date": "2022.02.01",
+    "time": "11:32",
+    "state": 1
+  },
+  {
+    "id": 14,
+    "peer": "bromanyt",
+    "date": "2022.02.01",
+    "time": "13:03",
+    "state": 1
+  },
+  {
+    "id": 15,
+    "peer": "adough",
+    "date": "2022.02.02",
+    "time": "13:03",
+    "state": 2
+  },
+  {
+    "id": 16,
+    "peer": "bromanyt",
+    "date": "2022.02.02",
+    "time": "13:03",
+    "state": 2
+  },
+  {
+    "id": 17,
+    "peer": "adough",
+    "date": "2022.02.03",
+    "time": "08:03",
+    "state": 1
+  },
+  {
+    "id": 18,
+    "peer": "adough",
+    "date": "2022.02.03",
+    "time": "13:03",
+    "state": 2
+  },
+  {
+    "id": 19,
+    "peer": "adough",
+    "date": "2022.02.03",
+    "time": "13:21",
+    "state": 1
+  },
+  {
+    "id": 20,
+    "peer": "adough",
+    "date": "2022.02.03",
+    "time": "14:03",
+    "state": 2
+  },
+  {
+    "id": 21,
+    "peer": "adough",
+    "date": "2022.02.03",
+    "time": "17:21",
+    "state": 1
+  },
+  {
+    "id": 22,
+    "peer": "adough",
+    "date": "2022.02.03",
+    "time": "20:03",
+    "state": 2
+  },
+  {
+    "id": 23,
+    "peer": "phawkgir",
+    "date": "2022.02.03",
+    "time": "09:03",
+    "state": 1
+  },
+  {
+    "id": 24,
+    "peer": "phawkgir",
+    "date": "2022.02.03",
+    "time": "12:03",
+    "state": 2
+  },
+  {
+    "id": 25,
+    "peer": "phawkgir",
+    "date": "2022.02.03",
+    "time": "12:21",
+    "state": 1
+  },
+  {
+    "id": 26,
+    "peer": "phawkgir",
+    "date": "2022.02.03",
+    "time": "13:03",
+    "state": 2
+  },
+  {
+    "id": 27,
+    "peer": "phawkgir",
+    "date": "2022.02.03",
+    "time": "14:21",
+    "state": 1
+  },
+  {
+    "id": 28,
+    "peer": "phawkgir",
+    "date": "2022.02.03",
+    "time": "22:03",
+    "state": 2
+  }
+]

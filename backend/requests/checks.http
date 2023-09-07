@@ -1,0 +1,30 @@
+###
+# @name Get checks
+GET http://localhost:8080/api/v1/check
+
+###
+# @name Add check
+POST http://localhost:8080/api/v1/check
+Content-Type: application/json
+
+{
+  "peer": "adough",
+  "task": "C2",
+  "date": "10.01.2014"
+}
+
+###
+# @name Update check
+PATCH http://localhost:8080/api/v1/check
+Content-Type: application/json
+
+{
+  "id": 1,
+  "peer": "telvina",
+  "task": "C1",
+  "date": "18.04.2007"
+}
+
+###
+# @name Delete check
+DELETE http://localhost:8080/api/v1/check/1

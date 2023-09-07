@@ -1,0 +1,31 @@
+###
+# @name Get transferredPoints
+GET http://localhost:8080/api/v1/transferred_points
+
+###
+# @name Add transferredPoints
+POST http://localhost:8080/api/v1/transferred_points
+Content-Type: application/json
+
+{
+  "checking_peer": "telvina",
+  "checked_peer": "adough",
+  "points_amount": 1
+}
+
+###
+# @name Update transferredPoints
+PATCH http://localhost:8080/api/v1/transferred_points
+Content-Type: application/json
+
+{
+  "id": 1,
+  "checking_peer": "adough",
+  "checked_peer": "telvina",
+  "points_amount": 2
+}
+
+
+###
+# @name Delete transferredPoints
+DELETE http://localhost:8080/api/v1/transferred_points/1

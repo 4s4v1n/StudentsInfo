@@ -1,0 +1,39 @@
+###
+# @name export peers
+GET http://localhost:8080/api/v1/export/peers
+
+###
+# @name export tasks
+GET http://localhost:8080/api/v1/export/tasks
+
+###
+# @name export checks
+GET http://localhost:8080/api/v1/export/checks
+
+###
+# @name export p2p
+GET http://localhost:8080/api/v1/export/p2p
+
+###
+# @name export verter
+GET http://localhost:8080/api/v1/export/verter
+
+###
+# @name export transferred_points
+GET http://localhost:8080/api/v1/export/transferred_points
+
+###
+# @name export friends
+GET http://localhost:8080/api/v1/export/friends
+
+###
+# @name export recommendations
+GET http://localhost:8080/api/v1/export/recommendations
+
+###
+# @name export xp
+GET http://localhost:8080/api/v1/export/xp
+
+###
+# @name export time_tracking
+GET http://localhost:8080/api/v1/export/time_tracking

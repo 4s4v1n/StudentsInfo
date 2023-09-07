@@ -1,0 +1,32 @@
+###
+# @name Get verters
+GET http://localhost:8080/api/v1/verter
+
+###
+# @name Add verter
+POST http://localhost:8080/api/v1/verter
+Content-Type: application/json
+
+{
+  "peer": "adough",
+  "task": "A1_Maze",
+  "state": "Start",
+  "time": "18:30"
+}
+
+###
+# @name Update verter
+PATCH http://localhost:8080/api/v1/verter
+Content-Type: application/json
+
+{
+  "id": 1,
+  "check_id": 2,
+  "state": "Start",
+  "time": "18:17:21"
+}
+
+
+###
+# @name Delete verter
+DELETE http://localhost:8080/api/v1/verter/1

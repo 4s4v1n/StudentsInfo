@@ -1,0 +1,34 @@
+###
+# @name Get p2ps
+GET http://localhost:8080/api/v1/p2p
+
+###
+# @name Add p2p
+POST http://localhost:8080/api/v1/p2p
+Content-Type: application/json
+
+{
+  "checked_peer": "adough",
+  "checking_peer": "phawkgir",
+  "task": "CPP2_s21_containers",
+  "state": "Start",
+  "time": "18:03:21"
+}
+
+###
+# @name Update p2p
+PATCH http://localhost:8080/api/v1/p2p
+Content-Type: application/json
+
+{
+  "id": 1,
+  "check_id": 2,
+  "checking_peer": "adough",
+  "state": "Start",
+  "time": "18:17:21"
+}
+
+
+###
+# @name Delete p2p
+DELETE http://localhost:8080/api/v1/p2p/3

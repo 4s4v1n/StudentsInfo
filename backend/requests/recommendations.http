@@ -1,0 +1,28 @@
+###
+# @name Get recommendations
+GET http://localhost:8080/api/v1/recommendation
+
+###
+# @name Add recommendation
+POST http://localhost:8080/api/v1/recommendation
+Content-Type: application/json
+
+{
+  "peer": "adough",
+  "recommended_peer": "telvina"
+}
+
+###
+# @name Update recommendation
+PATCH http://localhost:8080/api/v1/recommendation
+Content-Type: application/json
+
+{
+  "id": 1,
+  "peer": "sreanna",
+  "recommended_peer": "adough"
+}
+
+###
+# @name Delete recommendation
+DELETE http://localhost:8080/api/v1/recommendation/1
