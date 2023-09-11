@@ -34,7 +34,7 @@ combined into one layer using docker-compose. Accordingly, to run this applicati
 
 The application uses the following ports:
 1. 4500 - proxy (main)
-2. 3000 - front end
+2. 3000 - frontend
 3. 8080 - backend
 4. 5432 - database
 
